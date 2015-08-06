@@ -2,12 +2,25 @@ public class Ray
 {
     public:
         double startPos,
-               direction;
+               direction,
+               depth,
+               voxel_entry,
+               voxel_exit;
+        float  color,
+               mnormal,
+               dot_eye_normal;
+        float* normal;
+        float  hit[3], u[3], v[3], aabb[6];
+        int    max_traces,
+               current_traces
+               recent_cid
+               shader;
+        const PackedNodes* recent_parent;
         //const OctreeManager* octree;
 
     Ray::Ray()
     {
-
+        normal = mnormal;
     }
     Ray::~Ray()
     {
@@ -43,28 +56,5 @@ public class Ray
     bool hits()
     {
         hit.depth = INFINITY;
-    }
-}
-
-public class RayHit
-{
-    public:
-        float  color,
-               mnormal,
-               dot_eye_normal;
-        float* normal;
-        float  hit[3], u[3], v[3], aabb[6];
-        double depth, voxel_entry, voxel_exit;
-        int    max_traces,
-               current_traces
-               recent_cid
-               shader;
-        const PackedNodes* recent_parent;
-
-    private:
-
-    RayHit::RayHit()
-    {
-        normal = mnormal;
     }
 }
