@@ -7,20 +7,23 @@ public class Ray
                voxel_entry,
                voxel_exit;
         float  color,
-               movNormal[3],
+               normals[3],
                dot_eye_normal;
-        float* normal;
+        float* this_normal;
         float  hit[3], u[3], v[3], aabb[6];
         int    max_traces,
                current_traces,
                recent_cid,
                shader;
+        Node   this_parent;
         //const PackedNodes* recent_parent;
         //const OctreeManager* octree;
 
     this()
     {
-        normal = movNormal;
+        this_normal = normals;
+        max_traces = 5;
+        current_traces = 0;
     }
 
     void shade_on_miss(RayHit& hit)
@@ -44,9 +47,13 @@ public class Ray
 
     }
 
-    bool visible()
+    bool blocked()
     {
+        if()
+        {
 
+        }
+        return false;
     }
 
     bool hits()
