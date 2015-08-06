@@ -7,30 +7,26 @@ public class Ray
                voxel_entry,
                voxel_exit;
         float  color,
-               mnormal,
+               movNormal[3],
                dot_eye_normal;
         float* normal;
         float  hit[3], u[3], v[3], aabb[6];
         int    max_traces,
-               current_traces
-               recent_cid
+               current_traces,
+               recent_cid,
                shader;
-        const PackedNodes* recent_parent;
+        //const PackedNodes* recent_parent;
         //const OctreeManager* octree;
 
-    Ray::Ray()
+    this()
     {
-        normal = mnormal;
-    }
-    Ray::~Ray()
-    {
-
+        normal = movNormal;
     }
 
     void shade_on_miss(RayHit& hit)
     {
         hit.depth = INFINITY;
-        Supplies::traceHDRI(direction, hit.color);
+        //Supplies::traceHDRI(direction, hit.color);
     }
 
     void shade_on_hit()
