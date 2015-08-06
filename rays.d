@@ -57,4 +57,4 @@ public class Ray
     {
         hit.depth = INFINITY;
     }
-}
+};

@@ -27,4 +27,4 @@ class Voxel
         position = curPos;
     }
 
-}
+};
