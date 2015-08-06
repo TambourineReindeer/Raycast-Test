@@ -3,30 +3,25 @@ public class Ray
     public:
         double startPos,
                direction,
-               depth,
-               voxel_entry,
-               voxel_exit;
-        float  color,
-               normals[3],
-               dot_eye_normal;
+               depth;
+        float  color[4], // rgba
+               mover_normal[3];
         float* this_normal;
-        float  hit[3], u[3], v[3], aabb[6];
-        int    max_traces,
-               current_traces,
-               recent_cid,
-               shader;
-        Node   this_parent;
-        //const PackedNodes* recent_parent;
-        //const OctreeManager* octree;
+        int    max_traces, // max number of ray traces
+               current_traces, // current number of ray traces
+        Node   this_parent; // parent of hit node (voxel)
 
     this()
     {
-        this_normal = normals;
+        startPos = 0.0;
+        direction = null;
+        depth = null;
+        color = {0,0,0,0};
         max_traces = 5;
         current_traces = 0;
     }
 
-    void shade_on_miss(RayHit& hit)
+    void shade_on_miss(Ray& hit)
     {
         hit.depth = INFINITY;
         //Supplies::traceHDRI(direction, hit.color);
