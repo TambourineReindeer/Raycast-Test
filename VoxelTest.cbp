@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="VoxelTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gdc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/VoxelTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gdc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/VoxelTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gdc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="../AVox-1.1-src-win/AtomVox.dsp" />
+		<Unit filename="../AVox-1.1-src-win/AtomVox.dsw" />
+		<Unit filename="../AVox-1.1-src-win/Common.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Common.Cpp.cpp" />
+		<Unit filename="../AVox-1.1-src-win/Common.H" />
+		<Unit filename="../AVox-1.1-src-win/Config.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Config.H" />
+		<Unit filename="../AVox-1.1-src-win/DxControl.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/DxControl.H" />
+		<Unit filename="../AVox-1.1-src-win/Engine.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Engine.H" />
+		<Unit filename="../AVox-1.1-src-win/FPSClass.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/FPSClass.H" />
+		<Unit filename="../AVox-1.1-src-win/Font.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Font.H" />
+		<Unit filename="../AVox-1.1-src-win/HeighField.cpp" />
+		<Unit filename="../AVox-1.1-src-win/HeightField.H" />
+		<Unit filename="../AVox-1.1-src-win/Includes.H" />
+		<Unit filename="../AVox-1.1-src-win/Landscape.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Landscape.H" />
+		<Unit filename="../AVox-1.1-src-win/Log.H" />
+		<Unit filename="../AVox-1.1-src-win/Main.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Textures.Cpp" />
+		<Unit filename="../AVox-1.1-src-win/Textures.H" />
+		<Unit filename="../AVox-1.1-src-win/Utils.H" />
+		<Unit filename="../Voxlap-openGL/include/kplib.h" />
+		<Unit filename="../Voxlap-openGL/include/ksnippits.h" />
+		<Unit filename="../Voxlap-openGL/include/porthacks.h" />
+		<Unit filename="../Voxlap-openGL/include/sysmain.h" />
+		<Unit filename="../Voxlap-openGL/include/voxflash.h" />
+		<Unit filename="../Voxlap-openGL/include/voxlap5.h" />
+		<Unit filename="../Voxlap-openGL/share/documentation/Doxyfile" />
+		<Unit filename="../Voxlap-openGL/share/documentation/kwalkhlp.txt" />
+		<Unit filename="../Voxlap-openGL/share/documentation/slab6.txt" />
+		<Unit filename="../Voxlap-openGL/share/documentation/voxedhlp.txt" />
+		<Unit filename="../Voxlap-openGL/share/documentation/voxlib.txt" />
+		<Unit filename="../Voxlap-openGL/share/documentation/vxlform.txt" />
+		<Unit filename="../Voxlap-openGL/share/voxdata.zip" />
+		<Unit filename="../Voxlap-openGL/source/game.cpp" />
+		<Unit filename="../Voxlap-openGL/source/kplib.cpp" />
+		<Unit filename="../Voxlap-openGL/source/kwalk.cpp" />
+		<Unit filename="../Voxlap-openGL/source/s6.masm" />
+		<Unit filename="../Voxlap-openGL/source/s6.nasm" />
+		<Unit filename="../Voxlap-openGL/source/sdlmain.cpp" />
+		<Unit filename="../Voxlap-openGL/source/simple.cpp" />
+		<Unit filename="../Voxlap-openGL/source/slab6.cpp" />
+		<Unit filename="../Voxlap-openGL/source/slab6.rc" />
+		<Unit filename="../Voxlap-openGL/source/v5.jwasm" />
+		<Unit filename="../Voxlap-openGL/source/v5.masm" />
+		<Unit filename="../Voxlap-openGL/source/v5.nasm" />
+		<Unit filename="../Voxlap-openGL/source/voxed.cpp" />
+		<Unit filename="../Voxlap-openGL/source/voxlap5.cpp" />
+		<Unit filename="../Voxlap-openGL/source/winmain.cpp" />
+		<Unit filename="../adaptive-gi/GIShader.cpp" />
+		<Unit filename="../adaptive-gi/GIShader.h" />
+		<Unit filename="../adaptive-gi/Main.cpp" />
+		<Unit filename="../adaptive-gi/Makefile" />
+		<Unit filename="../adaptive-gi/Ray.cpp" />
+		<Unit filename="../adaptive-gi/Ray.h" />
+		<Unit filename="../adaptive-gi/Supplies.cpp" />
+		<Unit filename="../adaptive-gi/Supplies.h" />
+		<Unit filename="../adaptive-gi/config-checkerboard.h" />
+		<Unit filename="../adaptive-gi/config-quality.h" />
+		<Unit filename="../adaptive-gi/config-speed.h" />
+		<Unit filename="../adaptive-gi/config.h" />
+		<Unit filename="../adaptive-gi/mt19937ar-cok.cpp" />
+		<Unit filename="../adaptive-gi/mt19937ar-cok.h" />
+		<Unit filename="../adaptive-gi/win32stuff.h" />
+		<Unit filename="../doommy-master/BUILDING.txt" />
+		<Unit filename="../doommy-master/MANUAL.txt" />
+		<Unit filename="../doommy-master/README.md" />
+		<Unit filename="../doommy-master/doommy.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../doommy-master/examples/README-examples.txt" />
+		<Unit filename="../doommy-master/examples/example1.lua" />
+		<Unit filename="../doommy-master/examples/example2.lua" />
+		<Unit filename="../doommy-master/examples/example3.tar.bz2" />
+		<Unit filename="../doommy-master/examples/example4.lua" />
+		<Unit filename="../doommy-master/examples/parts/README-parts.txt" />
+		<Unit filename="../doommy-master/examples/parts/draw_text.lua" />
+		<Unit filename="../doommy-master/examples/parts/draw_wire_box.lua" />
+		<Unit filename="../doommy-master/examples/parts/fast_shade1.lua" />
+		<Unit filename="../doommy-master/examples/parts/fast_shade2.lua" />
+		<Unit filename="../doommy-master/examples/parts/generator1.lua" />
+		<Unit filename="../doommy-master/examples/parts/jaocc_shade.lua" />
+		<Unit filename="../doommy-master/examples/parts/shadow1.lua" />
+		<Unit filename="../doommy-master/examples/parts/update_box.lua" />
+		<Unit filename="../doommy-master/tools/composer/composer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../ph6dvxl/Doxyfile" />
+		<Unit filename="../ph6dvxl/MakeWin32.mak" />
+		<Unit filename="../ph6dvxl/Makefile" />
+		<Unit filename="../ph6dvxl/html/doxygen.css" />
+		<Unit filename="../ph6dvxl/html/doxygen.png" />
+		<Unit filename="../ph6dvxl/html/files.html" />
+		<Unit filename="../ph6dvxl/html/globals.html" />
+		<Unit filename="../ph6dvxl/html/globals_defs.html" />
+		<Unit filename="../ph6dvxl/html/globals_func.html" />
+		<Unit filename="../ph6dvxl/html/globals_vars.html" />
+		<Unit filename="../ph6dvxl/html/index.html" />
+		<Unit filename="../ph6dvxl/html/ph6dvxl_8c.html" />
+		<Unit filename="../ph6dvxl/html/tab_b.gif" />
+		<Unit filename="../ph6dvxl/html/tab_l.gif" />
+		<Unit filename="../ph6dvxl/html/tab_r.gif" />
+		<Unit filename="../ph6dvxl/html/tabs.css" />
+		<Unit filename="../ph6dvxl/html/typesWin_8h-source.html" />
+		<Unit filename="../ph6dvxl/html/typesWin_8h.html" />
+		<Unit filename="../ph6dvxl/html/vxlManager_8c.html" />
+		<Unit filename="../ph6dvxl/html/vxlManager_8h-source.html" />
+		<Unit filename="../ph6dvxl/html/vxlManager_8h.html" />
+		<Unit filename="../ph6dvxl/html/w32main_8c.html" />
+		<Unit filename="../ph6dvxl/latex/Helvetica.ttf" />
+		<Unit filename="../ph6dvxl/latex/Makefile" />
+		<Unit filename="../ph6dvxl/latex/doxygen.sty" />
+		<Unit filename="../ph6dvxl/latex/files.tex" />
+		<Unit filename="../ph6dvxl/latex/ph6dvxl_8c.tex" />
+		<Unit filename="../ph6dvxl/latex/refman.tex" />
+		<Unit filename="../ph6dvxl/latex/typesWin_8h.tex" />
+		<Unit filename="../ph6dvxl/latex/vxlManager_8c.tex" />
+		<Unit filename="../ph6dvxl/latex/vxlManager_8h.tex" />
+		<Unit filename="../ph6dvxl/latex/w32main_8c.tex" />
+		<Unit filename="../ph6dvxl/make.bat" />
+		<Unit filename="../ph6dvxl/ph6dvxl.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../ph6dvxl/readme.txt" />
+		<Unit filename="../ph6dvxl/toonsky.bmp" />
+		<Unit filename="../ph6dvxl/typesWin.h" />
+		<Unit filename="../ph6dvxl/vxlManager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../ph6dvxl/vxlManager.h" />
+		<Unit filename="../ph6dvxl/w32main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../rearview-code/DEPENDS" />
+		<Unit filename="../rearview-code/INSTALL" />
+		<Unit filename="../rearview-code/Makefile.am" />
+		<Unit filename="../rearview-code/README" />
+		<Unit filename="../rearview-code/acinclude.m4" />
+		<Unit filename="../rearview-code/configure.ac" />
+		<Unit filename="../rearview-code/docs/Makefile" />
+		<Unit filename="../rearview-code/docs/doxygen.conf" />
+		<Unit filename="../rearview-code/environment.hdr" />
+		<Unit filename="../rearview-code/include/BIH.h" />
+		<Unit filename="../rearview-code/include/Camera.h" />
+		<Unit filename="../rearview-code/include/MeshGeometry.h" />
+		<Unit filename="../rearview-code/include/MeshMap.h" />
+		<Unit filename="../rearview-code/include/MovementController.h" />
+		<Unit filename="../rearview-code/include/MovingObject.h" />
+		<Unit filename="../rearview-code/include/OctreeManager.h" />
+		<Unit filename="../rearview-code/include/PackedNodes.h" />
+		<Unit filename="../rearview-code/include/Ray.h" />
+		<Unit filename="../rearview-code/include/RayHit.h" />
+		<Unit filename="../rearview-code/include/RearviewClient.h" />
+		<Unit filename="../rearview-code/include/Renderer.h" />
+		<Unit filename="../rearview-code/include/Shader.h" />
+		<Unit filename="../rearview-code/include/SoundManager.h" />
+		<Unit filename="../rearview-code/include/Supplies.h" />
+		<Unit filename="../rearview-code/include/TankMovement.h" />
+		<Unit filename="../rearview-code/include/Thread.h" />
+		<Unit filename="../rearview-code/include/Triangle.h" />
+		<Unit filename="../rearview-code/include/WalkMovement.h" />
+		<Unit filename="../rearview-code/include/camera_config.h" />
+		<Unit filename="../rearview-code/include/foreign/mt19937ar-cok.h" />
+		<Unit filename="../rearview-code/include/foreign/rply.h" />
+		<Unit filename="../rearview-code/include/foreign/tribox.h" />
+		<Unit filename="../rearview-code/maps/landscape.3ds" />
+		<Unit filename="../rearview-code/maps/odd.3ds" />
+		<Unit filename="../rearview-code/maps/venus.3ds" />
+		<Unit filename="../rearview-code/models/explosion.3ds" />
+		<Unit filename="../rearview-code/models/rocket.3ds" />
+		<Unit filename="../rearview-code/models/tank.3ds" />
+		<Unit filename="../rearview-code/reconf" />
+		<Unit filename="../rearview-code/sounds/explosion.wav" />
+		<Unit filename="../rearview-code/src/BIH.cpp" />
+		<Unit filename="../rearview-code/src/Camera.cpp" />
+		<Unit filename="../rearview-code/src/Main.cpp" />
+		<Unit filename="../rearview-code/src/MeshGeometry.cpp" />
+		<Unit filename="../rearview-code/src/MeshMap.cpp" />
+		<Unit filename="../rearview-code/src/MovementController.cpp" />
+		<Unit filename="../rearview-code/src/MovingObject.cpp" />
+		<Unit filename="../rearview-code/src/OctreeManager.cpp" />
+		<Unit filename="../rearview-code/src/PackedNodes.cpp" />
+		<Unit filename="../rearview-code/src/Ray.cpp" />
+		<Unit filename="../rearview-code/src/RearviewClient.cpp" />
+		<Unit filename="../rearview-code/src/Renderer.cpp" />
+		<Unit filename="../rearview-code/src/Shader.cpp" />
+		<Unit filename="../rearview-code/src/SoundManager.cpp" />
+		<Unit filename="../rearview-code/src/Supplies.cpp" />
+		<Unit filename="../rearview-code/src/TankMovement.cpp" />
+		<Unit filename="../rearview-code/src/Thread.cpp" />
+		<Unit filename="../rearview-code/src/Triangle.cpp" />
+		<Unit filename="../rearview-code/src/WalkMovement.cpp" />
+		<Unit filename="../rearview-code/src/foreign/mt19937ar-cok.cpp" />
+		<Unit filename="../rearview-code/src/foreign/rply.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../rearview-code/src/foreign/tribox.cpp" />
+		<Unit filename="../rearview-code/src/treegen.cpp" />
+		<Unit filename="hello.d" />
+		<Unit filename="rays.d" />
+		<Unit filename="voxel.d" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
