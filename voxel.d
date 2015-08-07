@@ -1,17 +1,22 @@
-typedef struct {real x,y,z} Point3D;
-typedef struct {int sides[6]} CubeMap;
+class Point3D
+{
+    this() {real x,y,z;} 
+}
+class Cubemap
+{
+    this() {int[6] sides;}
+}
 
 class Voxel
 {
     public:
+        Point3D position;
 
     private:
         float length,
               width,
               height,
               normal;
-
-        Point3D position;
 
     // constructors
     this()
@@ -27,4 +32,4 @@ class Voxel
         position = curPos;
     }
 
-};
+}

@@ -234,6 +234,8 @@
 		<Unit filename="../rearview-code/src/foreign/tribox.cpp" />
 		<Unit filename="../rearview-code/src/treegen.cpp" />
 		<Unit filename="hello.d" />
+		<Unit filename="node.d" />
+		<Unit filename="octree.d" />
 		<Unit filename="rays.d" />
 		<Unit filename="voxel.d" />
 		<Extensions>

@@ -1,17 +1,17 @@
-class Octree
+public class Octree
 {
     public:
 
     private:
-        Node nodes[8];
+        Node[8] nodes;
 
     this()
     {
 
     }
 
-    Node Octree::getNode(int i)
+    Node getNode(int i)
     {
         return nodes[i];
     }
-};
+}

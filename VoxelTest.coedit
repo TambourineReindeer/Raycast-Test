@@ -1,0 +1,32 @@
+object CurrentProject: TCEProject
+  OptionsCollection = <  
+    item
+      name = 'default'
+    end  
+    item
+      name = 'debug'
+      debugingOptions.debug = True
+      debugingOptions.codeviewCformat = True
+      outputOptions.boundsCheck = onAlways
+    end  
+    item
+      name = 'unittest'
+      outputOptions.boundsCheck = onAlways
+      outputOptions.unittest = True
+    end  
+    item
+      name = 'release'
+      outputOptions.inlining = True
+      outputOptions.boundsCheck = offAlways
+      outputOptions.optimizations = True
+      outputOptions.release = True
+    end>
+  Sources.Strings = (
+    'hello.d'
+    'octree.d'
+    'node.d'
+    'voxel.d'
+    'rays.d'
+  )
+  ConfigurationIndex = 0
+end

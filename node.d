@@ -1,4 +1,4 @@
-class Node
+public class Node
 {
     public:
 
@@ -13,23 +13,23 @@ class Node
         parent = null;
     }
 
-    Node Node::getChild()
+    Node getChild()
     {
         return child;
     }
 
-    Node Node::getParent()
+    Node getParent()
     {
         return parent;
     }
 
-    void Node::setChild(child)
+    void setChild(child)
     {
         this.child = child;
     }
 
-    void Node::setParent(parent)
+    void setParent(parent)
     {
         this.parent = parent;
     }
-};
+}

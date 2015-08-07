@@ -1,27 +1,27 @@
-public class Ray
+class Ray
 {
     public:
         double startPos,
                direction,
                depth;
-        float  color[4], // rgba
-               mover_normal[3];
+        float[4]  color; // rgba
+        float[3]  mover_normal;
         float* this_normal;
         int    max_traces, // max number of ray traces
                current_traces, // current number of ray traces
-        Node   this_parent; // parent of hit node (voxel)
+        Node() =  this_parent; // parent of hit node (voxel)
 
     this()
     {
         startPos = 0.0;
         direction = null;
         depth = null;
-        color = {0,0,0,0};
+        color[] = 0;
         max_traces = 5;
         current_traces = 0;
     }
 
-    void shade_on_miss(Ray& hit)
+    void shade_on_miss(Ray hit)
     {
         hit.depth = INFINITY;
         //Supplies::traceHDRI(direction, hit.color);
@@ -44,10 +44,10 @@ public class Ray
 
     bool blocked()
     {
-        if()
-        {
+        //if()
+        //{
 
-        }
+        //}
         return false;
     }
 
@@ -55,4 +55,4 @@ public class Ray
     {
         hit.depth = INFINITY;
     }
-};
+}
