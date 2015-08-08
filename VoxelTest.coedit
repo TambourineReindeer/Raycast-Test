@@ -27,6 +27,7 @@ object CurrentProject: TCEProject
     'node.d'
     'voxel.d'
     'rays.d'
+    'view.d'
   )
   ConfigurationIndex = 0
 end

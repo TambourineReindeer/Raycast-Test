@@ -55,4 +55,12 @@ class Ray
     {
         hit.depth = INFINITY;
     }
+    
+    void cast()
+    {
+        for(int i = 0; i < SCREEN_X; i++)
+        {
+            //send out ray
+        }
+    }
 }
