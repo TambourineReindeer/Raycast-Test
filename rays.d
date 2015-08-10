@@ -1,3 +1,5 @@
+module view;
+
 class Ray
 {
     public:

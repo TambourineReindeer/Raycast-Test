@@ -1,3 +1,5 @@
+module voxel;
+
 class Point3D
 {
     this() {real x,y,z;} 

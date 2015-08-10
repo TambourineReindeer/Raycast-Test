@@ -1,3 +1,5 @@
+module octree;
+
 public class Octree
 {
     public:

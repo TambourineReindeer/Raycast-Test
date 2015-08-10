@@ -1,4 +1,6 @@
-//import std.math; //need to know what math library is called
+module view;
+
+import std.math;
 
 class View
 {
