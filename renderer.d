@@ -1,19 +1,17 @@
 module renderer;
 
 import std.math;
-import derelict.opengl3;
 
 class Renderer
 {
     public:
-        Plane proj; // plane upon which view is projected onto screen; "Plane" is a placeholder
-        int SCREEN_X, // screen length in pixels
-            SCREEN_Y; // screen width in pixels
+        int screen_length, // screen length (x) in pixels
+            screen_width; // screen width (y) in pixels
         float fov; // field of view
     
     this()
     {
-        proj = new Plane(SCREEN_X, SCREEN_Y);
+
     }
     
     float getFOV()

@@ -1,4 +1,4 @@
-module view;
+module renderer;
 
 class Ray
 {
