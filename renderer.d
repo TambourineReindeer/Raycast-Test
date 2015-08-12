@@ -1,19 +1,18 @@
 module renderer;
 
 import std.math;
+import std.signals;
+import derelict.opengl3.gl;
+
+import voxel.d;
 
 class Renderer
 {
     public:
-        int screen_length, // screen length (x) in pixels
-            screen_width; // screen width (y) in pixels
-        float fov; // field of view
-    
-    this()
-    {
+    float fov; // field of view
+	private:
+	Point3D position;
 
-    }
-    
     float getFOV()
     {
         return fov;

@@ -12,26 +12,22 @@ class Cubemap
 class Voxel
 {
     public:
-        Point3D position;
 
     private:
         float length,
-              width,
               height,
-              normal;
+			  width;
 
     // constructors
     this()
     {
         length, width, height = 1;
     }
-    this(float lengthIn, float widthIn, float heightIn, float normalIn, Point3D curPos)
+	this(float lengthIn, float heightIn, float widthIn)
     {
         length = lengthIn;
-        width = widthIn;
         height = heightIn;
-        normal = normalIn;
-        position = curPos;
+		width = widthIn;
     }
 
 }
