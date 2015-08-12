@@ -4,13 +4,13 @@
 	<Project>
 		<Option title="VoxelTest" />
 		<Option pch_mode="2" />
-		<Option compiler="gdc" />
+		<Option compiler="dmd" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/VoxelTest" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="gdc" />
+				<Option compiler="dmd" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -19,183 +19,16 @@
 				<Option output="bin/Release/VoxelTest" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
-				<Option compiler="gdc" />
+				<Option compiler="dmd" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-O" />
 				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
 			</Target>
 		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-		</Compiler>
-		<Unit filename="LICENSE" />
-		<Unit filename="README.md" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Common.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Common.Cpp.cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Common.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Config.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Config.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/DxControl.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/DxControl.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Engine.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Engine.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/FPSClass.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/FPSClass.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Font.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Font.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/HeighField.cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/HeightField.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Includes.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Landscape.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Landscape.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Log.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Main.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Textures.Cpp" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Textures.H" />
-		<Unit filename="Reference Code/AVox-1.1-src-win/Utils.H" />
-		<Unit filename="Reference Code/Voxlap-openGL/include/kplib.h" />
-		<Unit filename="Reference Code/Voxlap-openGL/include/ksnippits.h" />
-		<Unit filename="Reference Code/Voxlap-openGL/include/porthacks.h" />
-		<Unit filename="Reference Code/Voxlap-openGL/include/sysmain.h" />
-		<Unit filename="Reference Code/Voxlap-openGL/include/voxflash.h" />
-		<Unit filename="Reference Code/Voxlap-openGL/include/voxlap5.h" />
-		<Unit filename="Reference Code/Voxlap-openGL/readme.md" />
-		<Unit filename="Reference Code/Voxlap-openGL/share/documentation/kwalkhlp.txt" />
-		<Unit filename="Reference Code/Voxlap-openGL/share/documentation/slab6.txt" />
-		<Unit filename="Reference Code/Voxlap-openGL/share/documentation/voxedhlp.txt" />
-		<Unit filename="Reference Code/Voxlap-openGL/share/documentation/voxlib.txt" />
-		<Unit filename="Reference Code/Voxlap-openGL/share/documentation/vxlform.txt" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/game.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/kplib.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/kwalk.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/s6.masm" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/s6.nasm" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/sdlmain.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/simple.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/slab6.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/slab6.rc" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/v5.jwasm" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/v5.masm" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/v5.nasm" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/voxed.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/voxlap5.cpp" />
-		<Unit filename="Reference Code/Voxlap-openGL/source/winmain.cpp" />
-		<Unit filename="Reference Code/adaptive-gi/COPYING" />
-		<Unit filename="Reference Code/adaptive-gi/GIShader.cpp" />
-		<Unit filename="Reference Code/adaptive-gi/GIShader.h" />
-		<Unit filename="Reference Code/adaptive-gi/Main.cpp" />
-		<Unit filename="Reference Code/adaptive-gi/README" />
-		<Unit filename="Reference Code/adaptive-gi/Ray.cpp" />
-		<Unit filename="Reference Code/adaptive-gi/Ray.h" />
-		<Unit filename="Reference Code/adaptive-gi/Supplies.cpp" />
-		<Unit filename="Reference Code/adaptive-gi/Supplies.h" />
-		<Unit filename="Reference Code/adaptive-gi/config-checkerboard.h" />
-		<Unit filename="Reference Code/adaptive-gi/config-quality.h" />
-		<Unit filename="Reference Code/adaptive-gi/config-speed.h" />
-		<Unit filename="Reference Code/adaptive-gi/config.h" />
-		<Unit filename="Reference Code/adaptive-gi/mt19937ar-cok.cpp" />
-		<Unit filename="Reference Code/adaptive-gi/mt19937ar-cok.h" />
-		<Unit filename="Reference Code/adaptive-gi/win32stuff.h" />
-		<Unit filename="Reference Code/doommy-master/BUILDING.txt" />
-		<Unit filename="Reference Code/doommy-master/COPYING.txt" />
-		<Unit filename="Reference Code/doommy-master/MANUAL.txt" />
-		<Unit filename="Reference Code/doommy-master/README.md" />
-		<Unit filename="Reference Code/doommy-master/doommy.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Reference Code/doommy-master/examples/example1.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/example2.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/example4.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/README-parts.txt" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/draw_text.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/draw_wire_box.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/fast_shade1.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/fast_shade2.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/generator1.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/jaocc_shade.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/shadow1.lua" />
-		<Unit filename="Reference Code/doommy-master/examples/parts/update_box.lua" />
-		<Unit filename="Reference Code/doommy-master/tools/composer/COPYING.txt" />
-		<Unit filename="Reference Code/doommy-master/tools/composer/composer.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Reference Code/ph6dvxl/ph6dvxl.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Reference Code/ph6dvxl/ph6dvxl_license.txt" />
-		<Unit filename="Reference Code/ph6dvxl/readme.txt" />
-		<Unit filename="Reference Code/ph6dvxl/typesWin.h" />
-		<Unit filename="Reference Code/ph6dvxl/vxlManager.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Reference Code/ph6dvxl/vxlManager.h" />
-		<Unit filename="Reference Code/ph6dvxl/w32main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Reference Code/rearview-code/AUTHORS" />
-		<Unit filename="Reference Code/rearview-code/COPYING" />
-		<Unit filename="Reference Code/rearview-code/ChangeLog" />
-		<Unit filename="Reference Code/rearview-code/DEPENDS" />
-		<Unit filename="Reference Code/rearview-code/INSTALL" />
-		<Unit filename="Reference Code/rearview-code/LICENSE-RPLY" />
-		<Unit filename="Reference Code/rearview-code/NEWS" />
-		<Unit filename="Reference Code/rearview-code/README" />
-		<Unit filename="Reference Code/rearview-code/include/BIH.h" />
-		<Unit filename="Reference Code/rearview-code/include/Camera.h" />
-		<Unit filename="Reference Code/rearview-code/include/MeshGeometry.h" />
-		<Unit filename="Reference Code/rearview-code/include/MeshMap.h" />
-		<Unit filename="Reference Code/rearview-code/include/MovementController.h" />
-		<Unit filename="Reference Code/rearview-code/include/MovingObject.h" />
-		<Unit filename="Reference Code/rearview-code/include/OctreeManager.h" />
-		<Unit filename="Reference Code/rearview-code/include/PackedNodes.h" />
-		<Unit filename="Reference Code/rearview-code/include/Ray.h" />
-		<Unit filename="Reference Code/rearview-code/include/RayHit.h" />
-		<Unit filename="Reference Code/rearview-code/include/RearviewClient.h" />
-		<Unit filename="Reference Code/rearview-code/include/Renderer.h" />
-		<Unit filename="Reference Code/rearview-code/include/Shader.h" />
-		<Unit filename="Reference Code/rearview-code/include/SoundManager.h" />
-		<Unit filename="Reference Code/rearview-code/include/Supplies.h" />
-		<Unit filename="Reference Code/rearview-code/include/TankMovement.h" />
-		<Unit filename="Reference Code/rearview-code/include/Thread.h" />
-		<Unit filename="Reference Code/rearview-code/include/Triangle.h" />
-		<Unit filename="Reference Code/rearview-code/include/WalkMovement.h" />
-		<Unit filename="Reference Code/rearview-code/include/camera_config.h" />
-		<Unit filename="Reference Code/rearview-code/include/foreign/mt19937ar-cok.h" />
-		<Unit filename="Reference Code/rearview-code/include/foreign/rply.h" />
-		<Unit filename="Reference Code/rearview-code/include/foreign/tribox.h" />
-		<Unit filename="Reference Code/rearview-code/src/BIH.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Camera.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Main.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/MeshGeometry.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/MeshMap.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/MovementController.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/MovingObject.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/OctreeManager.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/PackedNodes.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Ray.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/RearviewClient.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Renderer.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Shader.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/SoundManager.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Supplies.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/TankMovement.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Thread.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/Triangle.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/WalkMovement.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/foreign/mt19937ar-cok.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/foreign/rply.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Reference Code/rearview-code/src/foreign/tribox.cpp" />
-		<Unit filename="Reference Code/rearview-code/src/treegen.cpp" />
 		<Unit filename="main.d" />
-		<Unit filename="node.d" />
 		<Unit filename="octree.d" />
 		<Unit filename="rays.d" />
-		<Unit filename="renderer.d" />
+		<Unit filename="render.d" />
 		<Unit filename="voxel.d" />
 		<Extensions>
 			<code_completion />

@@ -1,5 +1,38 @@
 module octree;
 
+class Node
+{
+    private:
+        Node child,
+        parent;
+
+    this()
+    {
+        child = null;
+        parent = null;
+    }
+
+    Node getChild()
+    {
+        return child;
+    }
+
+    Node getParent()
+    {
+        return parent;
+    }
+
+    void setChild(Node child)
+    {
+        this.child = child;
+    }
+
+    void setParent(Node parent)
+    {
+        this.parent = parent;
+    }
+}
+
 public class Octree
 {
     public:

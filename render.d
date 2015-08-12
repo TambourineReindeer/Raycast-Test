@@ -1,10 +1,10 @@
-module renderer;
+module render;
 
 import std.math;
 import std.signals;
 import derelict.opengl3.gl;
 
-import voxel.d;
+import voxel;
 
 class Renderer
 {
@@ -17,15 +17,17 @@ class Renderer
     {
         return fov;
     }
-    
-    void setFOV(newFOV)
+
+    void setFOV(float newFOV)
     {
         fov = newFOV;
     }
-    
+
+/*
     float getDistFromPlane(Plane proj, float refFOV)
     {
         int sideA = proj.length / 2;
         return distance = sideA / tan(refFOV/2);
     }
+    */
 }

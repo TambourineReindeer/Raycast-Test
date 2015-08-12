@@ -1,5 +1,5 @@
-module renderer;
-
+module render;
+/*
 class Ray
 {
     public:
@@ -57,8 +57,8 @@ class Ray
     {
         hit.depth = INFINITY;
     }
-    
-    void cast()
+
+    void cast_ray()
     {
         for(int i = 0; i < SCREEN_X; i++)
         {
@@ -66,3 +66,4 @@ class Ray
         }
     }
 }
+*/

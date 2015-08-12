@@ -1,6 +1,7 @@
 ﻿module main;
 
 import std.stdio;
+import std.string;
 import core.runtime;
 import derelict.opengl3.gl;
 import derelict.glfw3.glfw3;
@@ -12,16 +13,21 @@ import voxel;
 Renderer rend;
 
 // TODO: Write in native D not C wrapper?
-static void error_callback(int error, const char* description)
+/*
+extern (C) static void error_callback(int error, const char* description)
 {
 	fputs(description, stderr);
+}*/
+
+extern (C) nothrow
+{
+    static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+    {
+        if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+            glfwSetWindowShouldClose(window, GL_TRUE);
+    }
 }
 
-static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-	if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GL_TRUE);
-}
 
 void main(string[] args)
 {
@@ -31,7 +37,7 @@ void main(string[] args)
 	GLFWwindow* window;
 
 	// Reports error event through GLFW C function (prints to stderr)
-	glfwSetErrorCallback(error_callback);
+	//glfwSetErrorCallback(error_callback);
 
 	// If GLFW did not successfully initialize
 	if(!glfwInit())
@@ -51,8 +57,9 @@ void main(string[] args)
 	// Load GL 1.2+ now that context is created
 	DerelictGL.reload();
 
+    //TODO: Fix compile error
 	// Set window to close when Escape key is pressed
-	glfwSetKeyCallback(window, key_callback);
+	//glfwSetKeyCallback(window, key_callback);
 
 	//TODO: Move to Renderer?
 	while(!glfwWindowShouldClose(window))
@@ -75,55 +82,55 @@ void main(string[] args)
 
 		glMatrixMode(GL_MODELVIEW); // Set to modify model view matrix
 		glLoadIdentity();
-		position = new Point3D(0,0,0);
+		position = new Point3D(0.0, 0.0, 0.0);
 		voxel = new Voxel(1.0f, 1.0f, 1.0f);
 
 		//Begin rendering (should be in quads?)
 		glBegin(GL_QUADS);
 
-		rend.glPushMatrix();
+		glPushMatrix();
 
-		rend.glTranslated(position.x, position.y, position.z);
-		rend.glRenderMode(GL_POLYGON_MODE);
-		rend.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+		glTranslated(position.getX(), position.getY(), position.getZ());
+		glRenderMode(GL_POLYGON_MODE);
+		glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
-		rend.glNormal3f(0.0f, 0.0f, -1.0f);
-		rend.glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
-		rend.glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
-		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,y,z)
-		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,y,-z)
+		glNormal3f(0.0f, 0.0f, -1.0f);
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), -voxel.getWidth()); // (x,-y,-z)
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), -voxel.getWidth()); // (-x,-y,-z)
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (-x,y,z)
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (x,y,-z)
 
-		rend.glNormal3f(0.0f, 0.0f, 1.0f);
-		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
-		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
-		rend.glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
-		rend.glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
+		glNormal3f(0.0f, 0.0f, 1.0f);
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (-x,-y,z)
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (x,-y,z)
+		glVertex3f(voxel.getLength(), voxel.getHeight(), voxel.getWidth()); // (x,y,z)
+		glVertex3f(-voxel.getLength(), voxel.getHeight(), voxel.getWidth()); // (-x,y,z)
 
-		rend.glNormal3f(1.0f, 0.0f, 0.0f);
-		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
-		rend.glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
-		rend.glVertex4f(voxel.length, voxel.height, -voxel.width); // (x,y,-z)
-		rend.glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
+		glNormal3f(1.0f, 0.0f, 0.0f);
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (x,-y,z)
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), -voxel.getWidth()); // (x,-y,-z)
+		glVertex3f(voxel.getLength(), voxel.getHeight(), -voxel.getWidth()); // (x,y,-z)
+		glVertex3f(voxel.getLength(), voxel.getHeight(), voxel.getWidth()); // (x,y,z)
 
-		rend.glNormal3f(-1.0f, 0.0f, 0.0f);
-		rend.glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
-		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
-		rend.glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
-		rend.glVertex4f(-voxel.length, voxel.height, -voxel.width); // (-x,y,-z)
+		glNormal3f(-1.0f, 0.0f, 0.0f);
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), -voxel.getWidth()); // (-x,-y,-z)
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (-x,-y,z)
+		glVertex3f(-voxel.getLength(), voxel.getHeight(), voxel.getWidth()); // (-x,y,z)
+		glVertex3f(-voxel.getLength(), voxel.getHeight(), -voxel.getWidth()); // (-x,y,-z)
 
-		rend.glNormal3f(0.0f, -1.0f, 0.0f);
-		rend.glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
-		rend.glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
-		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
-		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
+		glNormal3f(0.0f, -1.0f, 0.0f);
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), -voxel.getWidth()); // (-x,-y,-z)
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), -voxel.getWidth()); // (x,-y,-z)
+		glVertex3f(voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (x,-y,z)
+		glVertex3f(-voxel.getLength(), -voxel.getHeight(), voxel.getWidth()); // (-x,-y,z)
 
-		rend.glNormal3f(0.0f, 1.0f, 0.0f);
-		rend.glVertex4f(voxel.length, voxel.height, -voxel.width); // (x,y,-z)
-		rend.glVertex4f(-voxel.length, voxel.height, -voxel.width); // (-x,y,-z)
-		rend.glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
-		rend.glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
+		glNormal3f(0.0f, 1.0f, 0.0f);
+		glVertex3f(voxel.getLength(), voxel.getHeight(), -voxel.getWidth()); // (x,y,-z)
+		glVertex3f(-voxel.getLength(), voxel.getHeight(), -voxel.getWidth()); // (-x,y,-z)
+		glVertex3f(-voxel.getLength(), voxel.getHeight(), voxel.getWidth()); // (-x,y,z)
+		glVertex3f(voxel.getLength(), voxel.getHeight(), voxel.getWidth()); // (x,y,z)
 
-		rend.glPopMatrix();
+		glPopMatrix();
 
 		//Stop rendering
 		glEnd();
