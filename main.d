@@ -6,10 +6,10 @@ import derelict.opengl3.gl;
 import derelict.glfw3.glfw3;
 
 import octree;
-import renderer;
+import render;
 import voxel;
 
-Renderer renderer;
+Renderer rend;
 
 // TODO: Write in native D not C wrapper?
 static void error_callback(int error, const char* description)
@@ -81,49 +81,49 @@ void main(string[] args)
 		//Begin rendering (should be in quads?)
 		glBegin(GL_QUADS);
 
-		renderer->glPushMatrix();
+		rend.glPushMatrix();
 
-		renderer->glTranslated(position.x, position.y, position.z);
-		renderer->glRenderMode(GL_POLYGON_MODE);
-		renderer->glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+		rend.glTranslated(position.x, position.y, position.z);
+		rend.glRenderMode(GL_POLYGON_MODE);
+		rend.glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
 
-		renderer->glNormal3f(0.0f, 0.0f, -1.0f);
-		renderer->glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
-		renderer->glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
-		renderer->glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,y,z)
-		renderer->glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,y,-z)
+		rend.glNormal3f(0.0f, 0.0f, -1.0f);
+		rend.glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
+		rend.glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
+		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,y,z)
+		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,y,-z)
 
-		renderer->glNormal3f(0.0f, 0.0f, 1.0f);
-		renderer->glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
-		renderer->glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
-		renderer->glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
-		renderer->glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
+		rend.glNormal3f(0.0f, 0.0f, 1.0f);
+		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
+		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
+		rend.glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
+		rend.glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
 
-		renderer->glNormal3f(1.0f, 0.0f, 0.0f);
-		renderer->glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
-		renderer->glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
-		renderer->glVertex4f(voxel.length, voxel.height, -voxel.width); // (x,y,-z)
-		renderer->glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
+		rend.glNormal3f(1.0f, 0.0f, 0.0f);
+		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
+		rend.glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
+		rend.glVertex4f(voxel.length, voxel.height, -voxel.width); // (x,y,-z)
+		rend.glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
 
-		renderer->glNormal3f(-1.0f, 0.0f, 0.0f);
-		renderer->glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
-		renderer->glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
-		renderer->glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
-		renderer->glVertex4f(-voxel.length, voxel.height, -voxel.width); // (-x,y,-z)
+		rend.glNormal3f(-1.0f, 0.0f, 0.0f);
+		rend.glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
+		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
+		rend.glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
+		rend.glVertex4f(-voxel.length, voxel.height, -voxel.width); // (-x,y,-z)
 
-		renderer->glNormal3f(0.0f, -1.0f, 0.0f);
-		renderer->glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
-		renderer->glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
-		renderer->glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
-		renderer->glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
+		rend.glNormal3f(0.0f, -1.0f, 0.0f);
+		rend.glVertex4f(-voxel.length, -voxel.height, -voxel.width); // (-x,-y,-z)
+		rend.glVertex4f(voxel.length, -voxel.height, -voxel.width); // (x,-y,-z)
+		rend.glVertex4f(voxel.length, -voxel.height, voxel.width); // (x,-y,z)
+		rend.glVertex4f(-voxel.length, -voxel.height, voxel.width); // (-x,-y,z)
 
-		renderer->glNormal3f(0.0f, 1.0f, 0.0f);
-		renderer->glVertex4f(voxel.length, voxel.height, -voxel.width); // (x,y,-z)
-		renderer->glVertex4f(-voxel.length, voxel.height, -voxel.width); // (-x,y,-z)
-		renderer->glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
-		renderer->glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
+		rend.glNormal3f(0.0f, 1.0f, 0.0f);
+		rend.glVertex4f(voxel.length, voxel.height, -voxel.width); // (x,y,-z)
+		rend.glVertex4f(-voxel.length, voxel.height, -voxel.width); // (-x,y,-z)
+		rend.glVertex4f(-voxel.length, voxel.height, voxel.width); // (-x,y,z)
+		rend.glVertex4f(voxel.length, voxel.height, voxel.width); // (x,y,z)
 
-		renderer->glPopMatrix();
+		rend.glPopMatrix();
 
 		//Stop rendering
 		glEnd();
